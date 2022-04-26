@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+## Desafío 02 - "Crear un componente NavBar"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+En esta oportunidad he creado un componente NavBar.jsx dentro de una carpeta
+a la que he llamado "components"
 
-## Available Scripts
+Existen muchas formas de organizar nuestro código, y es que en React JS no hay nada definido.
+Si hay algo que caracteriza mucho a esta librería es que tenemos mucha libertad, es por
+eso que también debemos ser cautelosos con cómo organizamos nuestros archivos.
 
-In the project directory, you can run:
+A continuación les mostraré la distribución que he pensado en primera instancia para este proyecto que es relativamente pequeño:
 
-### `npm start`
+|--src/
+|--|--components/
+|--|--|--styles/
+|--|--|--|--NavBar.css
+|--|--|--|NavBar.jsx
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Existen muchas maneras pero esta me sirve mucho cuando tengo 4 o 6 components como máximo. Para el proyecto de ecommerce puende usar el siguiente:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+|--src/
+|--|--components/
+|--|--|--NavBar/
+|--|--|--|--NavBar.css
+|--|--|--|--NavBar.jsx
 
-### `npm test`
+## Creando un CartWidget
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+En mi caso, he creado un componente llamado CartWidget.jsx con su respectiva hoja de estilos en la carpeta /styles
 
-### `npm run build`
+### CartWidget
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Este CartWidget tiene un ícono de fontawesome (un baso de cerveza 😜) y tiene un pequeño elemento html que muestra un número. En el futuro este número cambiará en base a los productos que tenga en mi carrito.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Posteriormente, monté el CartWidget dentro de mi component NavBar ✨
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Hero
 
-### `npm run eject`
+Bueno, como verán he agregado un hero a mi página, obviamente cree un componente llamado hero, el cual por la propiedad de CSS ( background-image ), muestra una imagen de fondo. Este hero está recibiendo por props una prop llamada title con el título que ven "El Rey de la Cerveza". Más adelante haré un slide con esto, y cada vez que cambie de slide, ingresaré un title diferente.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Bueno, es todo por hoy 😉

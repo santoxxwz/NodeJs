@@ -1,17 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import NavBar from './components/NavBar.jsx';
+import Hero from './components/Hero.jsx';
+import './style.css';
 
-function App() {
+export default function App() {
   return (
     <>
-    <h1>Venta de Automoviles</h1>
-    <strong>Vehiculos disponibles</strong>
-    <li>Maseratti</li>
-    <li>Ferrari</li>
-    <li>Aston Martin</li>
-    <li>Lamborghini</li>
-  </>
+      <NavBar background={'transparent'} />
+      <Hero title="La mejor importadora de automoviles en colombia" />
+    </>
   );
 }
-
-export default App;
