@@ -1,17 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import CartProvider from './context/CartContext.js';
+import AppRouter from './routes/AppRouter.js';
 
-function App() {
-  return (
+import './style.css';
+
+export default function App() {
+
+
+  return (    
     <>
-    <h1>Venta de Automoviles</h1>
-    <strong>Vehiculos disponibles</strong>
-    <li>Maseratti</li>
-    <li>Ferrari</li>
-    <li>Aston Martin</li>
-    <li>Lamborghini</li>
-  </>
+      <CartProvider>
+
+        <AppRouter />
+
+      </CartProvider> 
+    </>
   );
 }
-
-export default App;
