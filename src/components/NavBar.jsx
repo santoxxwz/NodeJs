@@ -1,52 +1,60 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import './styles/NavBar.css';
 
-const NavBar = ({ background }) => {
-  const brand =
-    'https://poblautos.com/wp-content/uploads/2020/08/Logo-POBLAUTOS-Principal.svg';
 
+const NavBar = ({ background }) => {
+  //Declaro una variable donde voy a almacenar la ruta de la imagen que quiero mostrar
+  const brand =
+    'https://poblautos.com/wp-content/uploads/2020/08/Logo-POBLAUTOSFloting.svg';
+  //la lógica va siempre antes del return
   return (
     <header className={`header background--${background}`}>
-
+      
       <div className="header-container">
-
-
+        
+        {/* Botón de menú  */}
         <div className="menu-button">
-          <FontAwesomeIcon icon={faBars} size="lg" color="white" />
+          <FontAwesomeIcon icon={faBars} size="lg" color="white"/>
           <span>Menu</span>
         </div>
 
-
+        {/* links de navegación */}
         <nav>
           <ul className="nav-container">
             <li>
-              <a href="/">Inicio</a>
+              <Link to="/">Inicio</Link>
             </li>
             <li className="products-item">
-              <a href="/">
+              <Link to="/products">
                 Productos <span className="arrow"></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/">Blog</a>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <a href="/">Contacto</a>
+              <Link to="/contacto">Contacto</Link>
             </li>
           </ul>
         </nav>
 
-
+        {/* logo de la marca */}
         <div className="logo-container">
-          <img src={brand} alt="logo" />
+          <Link to="/">
+            <img src={brand} alt="logo" />
+          </Link>
         </div>
 
-
-        <CartWidget />
+        {/* cart widget */}
+        <Link to="/cart">
+          <CartWidget />
+        </Link>
+          
       </div>
     </header>
   );
