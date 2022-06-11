@@ -43,14 +43,13 @@ const NavBar = ({ background }) => {
           </ul>
         </nav>
 
-        {/* logo de la marca */}
+
         <div className="logo-container">
           <Link to="/">
             <img src={brand} alt="logo" />
           </Link>
         </div>
 
-        {/* cart widget */}
         <Link to="/cart">
           <CartWidget />
         </Link>

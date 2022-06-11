@@ -30,7 +30,7 @@ const ItemList = () => {
           })}
         </>
       ) : (
-        <img className="load-beer" src={"http://kudly01.tumblr.com/post/52404495473"} />
+        <img className="load-beer" src={"https://media3.giphy.com/media/2kSfEOhJJApaYXsRJ7/giphy.gif?cid=ecf05e478wmerfim14hkh2ftgt8a2tlxlgtq0266hooh25q3&rid=giphy.gif&ct=g"} />
       )}
     </div>
   );

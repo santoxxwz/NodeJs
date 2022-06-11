@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <main>
             <Hero title="El mejor Compraventa de colombia" />
-            <ItemListContainer />  
+             
         </main>
     )
 }
